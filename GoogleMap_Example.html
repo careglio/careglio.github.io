@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+       #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
+  </head>
+  <body>
+    <h3>My Google Maps Demo</h3>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var terrassa = {lat: 41.5667, lng: 2.0167};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: terrassa
+        });
+        var marker = new google.maps.Marker({
+          position: terrassa,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAyvYtnuE8g0sUYPK9_6Ot2MCPDUfSkTnQ&callback=initMap">
+    </script>
+  </body>
+</html>
